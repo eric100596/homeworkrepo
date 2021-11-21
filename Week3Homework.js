@@ -11,26 +11,27 @@ function greetCustomer () {
 function getPizzaOrder (size, crust,...toppings) {
   const myOrder = window.prompt("Pizza size: Enter x-large, large, or medium");
   const myOrder2 = window.prompt("Type of crust: Enter pan, hand tossed, or thin ");
-  const myOrder3 = window.prompt("Toppings?: Enter sausage, pepperoni, cheese, and/or olives");
-  console.log(`Here's your order: A ${myOrder} ${myOrder2} pizza, with ${myOrder3}`);
+  const myOrder3 = window.prompt("Toppings?: Enter sausage, pepperoni, cheese, and/or olives (one at a time followed by 'and'");
+  console.log(`Here's your order: A ${myOrder} ${myOrder2} pizza, with ${myOrder3}. It's cooking!`);
 }
 
-getPizzaOrder(toppings);
 
-const sizes = ["extra large", "large", "medium"];
-const crusts = ["pan", "hand tossed", "thin"];
-
-function preparePizza(size, crust, topping) {
+function preparePizza(size, crust, toppings) {
 
   const myPizza = {
-size: "sizes",
-crust: "crusts",
-toppings:["sausage", "pepperoni", "cheese", "olives"],
+size: size,
+crust: crust,
+toppings: ['sausage', 'pepperoni', 'cheese', 'olives'],
+}
+return myPizza;
 }
 
+
+
+
+function servePizza () {
+
+return `Order up! You had a ${preparePizza()}. Enjoy!`;
 }
 
-
-preparePizza(myPizza);
-
-
+servePizza(preparePizza(getPizzaOrder(toppings)));
