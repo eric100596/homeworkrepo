@@ -21,7 +21,7 @@ function preparePizza(size, crust, toppings) {
   const myPizza = {
 size: size,
 crust: crust,
-toppings: ['sausage', 'pepperoni', 'cheese', 'olives'],
+toppings: toppings,
 }
 return myPizza;
 }
